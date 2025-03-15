@@ -1,23 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaPhone } from "react-icons/fa"; // Import the phone icon
-import logo from "../img/SMMA.png"; // Replace with the actual path to your logo image
+import logoDesktop from "../img/SMMA.png"; // Replace with the actual path to your desktop logo image
+import logoMobile from "../img/SocialMediaLogo.png"; // Replace with the actual path to your mobile logo image
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024); // Adjust the breakpoint as needed
 
   const clickHandler = () => {
     setShow(!show);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); // Adjust the breakpoint as needed
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="w-full xl:h-24 lg:h-20 h-16 flex flex-row items-center justify-between lg:px-32 sm:px-20 px-10 shadow-lg relative secondary-font">
       {/* Logo */}
       <a href="/Marketing-Website/" className="flex items-center">
         <img
-          src={logo} // Path to your logo image
+          src={isMobile ? logoMobile : logoDesktop} // Use mobile logo for mobile screens
           alt="Brand Logo"
-          className="h-12 lg:h-16" // Adjust height as needed
+          className="h-10 lg:h-10" // Adjust height as needed
         />
       </a>
 
