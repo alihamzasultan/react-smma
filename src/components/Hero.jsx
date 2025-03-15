@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import CtaButton from "./CtaButton";
 
 // Import videos
 import backgroundVideo from "../img/video/hero.mp4"; // High-quality background video
@@ -14,6 +13,7 @@ const Hero = () => {
   });
 
   const [formOffset, setFormOffset] = useState(0); // Tracks the form's vertical offset
+  const [showForm, setShowForm] = useState(false); // State to control form visibility on mobile
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -55,8 +55,13 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Toggle form visibility on mobile
+  const toggleFormVisibility = () => {
+    setShowForm(!showForm);
+  };
+
   return (
-    <div className="relative min-h-screen pb-32 flex items-center justify-center hero-section">
+    <div className="relative min-h-[80vh] flex items-center justify-center hero-section">
       {/* Background Video */}
       <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
         <video
@@ -73,8 +78,8 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full px-6 lg:px-20">
         {/* Left Side - Headline and CTA */}
-        <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+        <div className="text-center lg:text-left lg:w-1/2 mb-8 lg:mb-0">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 mt-10">
             Social Media: Pioneering the Future of Digital Marketing.
           </h1>
           <p className="text-lg lg:text-xl text-[#E9C469] mb-8 max-w-2xl mx-auto lg:mx-0">
@@ -82,15 +87,23 @@ const Hero = () => {
             strategies and the latest technologies.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
-          <p className="text-lg font-semibold text-white mb-6">
-Book Your free Consultation!
-          </p>
+
+            {/* Show this button only on mobile screens */}
+            <button
+              onClick={toggleFormVisibility}
+              className="lg:hidden bg-[#2A9D8F] text-white py-3 px-6 rounded-lg hover:bg-[#264653] transition-all duration-300"
+            >
+              {showForm ? "Hide Form" : "Book Your free Consultation!"}
+            </button>
           </div>
         </div>
 
         {/* Right Side - Contact Form */}
+        {/* Hide form on mobile by default, show only when button is clicked */}
         <div
-          className="scrollable-form bg-white p-6 sm:p-8 rounded-lg shadow-2xl w-full lg:w-1/3 mt-10 lg:mt-0 z-20"
+          className={`scrollable-form bg-white p-6 sm:p-8 rounded-lg shadow-2xl w-full lg:w-1/3 ${
+            showForm ? "block" : "hidden lg:block"
+          } ${window.innerWidth <= 1024 ? "mt-0" : "lg:mt-0"}`} // No margin on mobile
           style={{ transform: `translateY(${formOffset}px)` }}
         >
           <h2 className="text-2xl font-bold text-[#264653] mb-6">
@@ -139,7 +152,7 @@ Book Your free Consultation!
               value={formData.project}
               onChange={handleChange}
               className="w-full p-3 border border-[#2A9D8F] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E9C469]"
-              rows="3" // Reduced rows for smaller screens
+              rows="3"
               required
             ></textarea>
             <button
