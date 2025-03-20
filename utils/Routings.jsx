@@ -6,7 +6,6 @@ import Home from "../src/components/Home";
 
 
 
-import Hireus from "../src/services/Hireus";
 
 const Routings = () => {
   return (
