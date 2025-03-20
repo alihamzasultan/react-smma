@@ -21,7 +21,7 @@ const Clients = () => {
   }, []);
 
   return (
-    <div data-aos="fade-down" className="py-20 bg-white">
+    <div className="py-20 bg-white">
       {/* Section Heading */}
       <h1 className="text-3xl font-bold text-center text-[#264653]">Clients</h1>
       <div className="flex justify-center items-center mt-2">
