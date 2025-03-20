@@ -50,7 +50,7 @@ const Team = () => {
 const teamMembers = [
   { image: "https://res.cloudinary.com/dg7joeqah/image/upload/v1742480726/1_sbjsv2.webp", name: "Roy Anderson" },
   { image: "https://res.cloudinary.com/dg7joeqah/image/upload/v1742480715/2_aehrke.webp", name: "Bri Fox" },
-  { image: "https://res.cloudinary.com/dg7joeqah/image/upload/v1742480722/3_evt8ll.webp", name: "Cathey Watkins" },
+  { image: "https://res.cloudinary.com/dg7joeqah/image/upload/t_face only/v1742483489/ed2b1ac6-58f0-4059-821c-e0546b3ca7a0_jpi8la.png", name: "Cathey Watkins" },
   { image: "https://res.cloudinary.com/dg7joeqah/image/upload/v1742480721/4_a02f5j.webp", name: "Dionte Johnson" },
   { image: "https://res.cloudinary.com/dg7joeqah/image/upload/v1742480718/5_oj7jbe.webp", name: "Kyle Evans" },
   { image: "https://res.cloudinary.com/dg7joeqah/image/upload/v1742480723/6_ebj7kv.webp", name: "Alicia Silvers" },
