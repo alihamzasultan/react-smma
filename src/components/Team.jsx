@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import team1 from "../img/1.jpg";
-import team2 from "../img/2.jpg";
-import team3 from "../img/3.jpg";
-import team4 from "../img/4.jpg";
-import team5 from "../img/5.jpg";
-import team6 from "../img/6.jpg";
+import team1 from "../img/1.webp";
+import team2 from "../img/2.webp";
+import team3 from "../img/3.webp";
+import team4 from "../img/4.webp";
+import team5 from "../img/5.webp";
+import team6 from "../img/6.webp";
 
 // AOS
 import AOS from "aos";
