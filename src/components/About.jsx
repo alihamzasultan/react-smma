@@ -19,7 +19,7 @@ const About = () => {
       {/* Section Heading */}
       <div className="text-center">
         <h1
-          data-aos="fade-down"
+
           className="text-4xl font-bold text-[#264653] mb-4"
         >
           Pioneers in Digital Since 2009
@@ -33,7 +33,7 @@ const About = () => {
       <div className="flex flex-col lg:flex-row items-center lg:gap-20 px-6 lg:px-0">
         {/* Left Column (Image or Visual) */}
         <div
-          data-aos="fade-right"
+       
           className="lg:w-1/2 w-full mb-10 lg:mb-0"
         >
           <img
@@ -47,7 +47,7 @@ const About = () => {
         <div className="lg:w-1/2 w-full">
           {/* Main Paragraph */}
           <p
-            data-aos="fade-left"
+          
             className="text-lg text-[#264653] mb-8 leading-relaxed"
           >
             Since 2009, <strong>Social Media</strong> has been at the forefront of digital marketing, not just adapting to the future, but actively shaping it. We saw the potential for deeper brand-audience connections early on, and embraced a pioneer spirit to explore uncharted digital territories. Partnering with diverse brands, we've witnessed and driven the transformative power of digital marketing.
@@ -57,7 +57,7 @@ const About = () => {
           <div className="space-y-8">
             {/* Point 1 */}
             <div
-              data-aos="zoom-in"
+            
               className="flex items-start gap-6"
             >
               <div className="bg-[#2A9D8F] p-4 rounded-full text-white">
@@ -75,7 +75,7 @@ const About = () => {
 
             {/* Point 2 */}
             <div
-              data-aos="zoom-in"
+            
               className="flex items-start gap-6"
             >
               <div className="bg-[#E9C469] p-4 rounded-full text-white">
@@ -93,7 +93,7 @@ const About = () => {
 
             {/* Point 3 */}
             <div
-              data-aos="zoom-in"
+          
               className="flex items-start gap-6"
             >
               <div className="bg-[#E86F51] p-4 rounded-full text-white">
