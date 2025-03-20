@@ -26,7 +26,7 @@ const Services = () => {
     <div className="py-20 bg-white">
       {/* Section Heading */}
       <div className="text-center">
-        <h1 data-aos="fade-down" className="text-4xl font-bold text-[#264653] mb-4">
+        <h1 className="text-4xl font-bold text-[#264653] mb-4">
           Cutting-Edge Digital Marketing Solutions
         </h1>
         <div className="flex justify-center items-center mb-10">
@@ -39,8 +39,8 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
+            
+           
             className="flex flex-col items-center text-center"
           >
             {/* Icon */}
