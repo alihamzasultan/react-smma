@@ -3,12 +3,10 @@ import NavBar from './NavBar'
 import Hero from './Hero'
 import About from './About'
 import Services from './Services'
-import Portfolio from './Portfolio'
-import FreqAskedQues from './FreqAskedQues'
+
 import Team from './Team'
 import Clients from './Clients'
-import Contact from './Contact'
-import Newsletter from './Newsletter'
+
 import Footer from './Footer'
 
 const Home = () => {
