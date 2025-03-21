@@ -18,14 +18,22 @@ const Team = () => {
 
   return (
     <div id='team' className="relative flex flex-col md:flex-row items-center justify-center min-h-[50vh] bg-gray-100 px-12 py-10">
+      {/* Heading - Hidden on small screens */}
       <div className="md:w-[35%] text-left md:text-left mb-2 md:mb-0">
-        <h1 className="text-4xl sm:text-5xl font-bold">Team</h1>
-        <p className="text-gray-700 text-lg mt-4 max-w-md">
+        <h1 className="hidden md:block text-4xl sm:text-5xl font-bold">Our Team</h1>
+        {/* Mission Statement - Visible on all screens but moves to bottom center on mobile */}
+        <p className="text-gray-700 text-lg mt-4 max-w-md text-center md:text-left ">
           Our Mission is clear. We are building to train over 10 Crores Career Aspirants.
         </p>
       </div>
 
-      <div className="relative w-[420px] h-[420px] lg:w-[480px] lg:h-[480px]">
+      {/* Team Images and Center Circle */}
+      <div className="relative flex items-center justify-center w-[420px] h-[420px] lg:w-[480px] lg:h-[480px]">
+        {/* Empty Circle with Text - Visible only on mobile screens */}
+        <div className="md:hidden absolute flex items-center justify-center w-32 h-32 lg:w-40 lg:h-40 border-4 border-gray-100 rounded-full">
+          <p className="text-center text-gray-700 font-bold text-lg">Our Team</p>
+        </div>
+
         {teamMembers.map((member, index) => (
           <TeamImage
             key={index}
@@ -38,6 +46,9 @@ const Team = () => {
           />
         ))}
       </div>
+
+      {/* Mission Statement - Moves to bottom center on mobile screens */}
+
     </div>
   );
 };
@@ -72,9 +83,12 @@ const TeamImage = ({ image, name, designation, position, total, isMobile }) => {
         loading="lazy"
         className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 object-cover rounded-full border-4 border-white shadow-lg group-hover:brightness-50 transition duration-300 transition-transform duration-300 group-hover:scale-110"
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50 rounded-full">
-        <p className="text-white text-sm font-semibold">{name}</p>
-        <p className="text-white text-xs">{designation}</p>
+      {/* Hover Bubble */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                      w-max px-4 py-2 bg-black text-white text-sm rounded-lg 
+                      opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg z-50">
+        <p className="font-semibold">{name}</p>
+        <p className="text-xs">{designation}</p>
       </div>
     </div>
   );
