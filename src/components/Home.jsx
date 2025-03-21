@@ -16,10 +16,10 @@ const Home = () => {
 
         <Hero />
 
-      <section id="about" className="w-full max-h-fit py-32  overflow-hidden border-b border-orange-100">
+      <section id="about" className="w-full max-h-fit py-32  overflow-hidden border-b border-white-100">
         <About />
       </section>
-      <section id="services" className="w-full max-h-fit py-16  overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
+      <section id="services" className="w-full max-h-fit py-16  overflow-hidden border-b border-white-100">
         <Services />
       </section>
       {/* <section id="portfolio" className="w-full max-h-fit py-16 lg:px-32 overflow-hidden border-b border-orange-100">
@@ -31,7 +31,7 @@ const Home = () => {
       <section >
         <Team />
       </section>
-      <section className="w-full max-h-fit py-16  overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
+      <section className="w-full max-h-fit  overflow-hidden border-b border-white-100">
         <Clients />
       </section>
       {/* <section id="contact" className="w-full max-h-fit py-16 lg:px-32 overflow-hidden border-b border-orange-100">
