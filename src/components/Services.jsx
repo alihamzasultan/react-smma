@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Marquee from "react-fast-marquee";
 
 // AOS
 import AOS from "aos";
@@ -16,7 +17,6 @@ const Services = () => {
     { name: "Social Videography", icon: "videocam" },
     { name: "Promoted & Paid Social Management", icon: "trending_up" },
     { name: "Social Channel Management & Analytics", icon: "layers" },
-
     { name: "Custom Social Dashboards", icon: "dashboard" },
     { name: "Community Management", icon: "people" },
     { name: "Influencer Strategy & Management", icon: "star" },
@@ -34,15 +34,10 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6 lg:px-20 mt-16">
+      {/* Static Grid for Larger Screens */}
+      <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6 lg:px-20 mt-16">
         {services.map((service, index) => (
-          <div
-            key={index}
-            
-           
-            className="flex flex-col items-center text-center"
-          >
+          <div key={index} className="flex flex-col items-center text-center">
             {/* Icon */}
             <span className="material-icons text-[#2A9D8F] text-6xl mb-4">
               {service.icon}
@@ -53,6 +48,24 @@ const Services = () => {
             </h3>
           </div>
         ))}
+      </div>
+
+      {/* Animated Marquee for Mobile Screens */}
+      <div className="md:hidden">
+        <Marquee pauseOnHover="true" className="flex items-center">
+          {services.map((service, index) => (
+            <div key={index} className="flex flex-col items-center text-center mx-10">
+              {/* Icon */}
+              <span className="material-icons text-[#2A9D8F] text-5xl mb-2">
+                {service.icon}
+              </span>
+              {/* Service Name */}
+              <h3 className="text-lg font-semibold text-[#264653]">
+                {service.name}
+              </h3>
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );
