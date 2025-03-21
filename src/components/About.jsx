@@ -15,13 +15,16 @@ const About = () => {
   }, []);
 
   return (
-    <div className="relative lg:mx-32 py-20 bg-white">
-      {/* Section Heading */}
-      <div className="text-center">
-        <h1
+    <div className="relative xl:mx-32 py-20 bg-white">
+      {/* Background Image for screens below xl */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20 xl:hidden"
+        style={{ backgroundImage: `url(${aboutImage})` }}
+      ></div>
 
-          className="text-4xl font-bold text-[#264653] mb-4"
-        >
+      {/* Section Heading */}
+      <div className="text-center relative z-10">
+        <h1 className="text-4xl font-bold text-[#264653] mb-4">
           Pioneers in Digital Since 2009
         </h1>
         <div className="flex justify-center items-center mb-10">
@@ -30,36 +33,26 @@ const About = () => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col lg:flex-row items-center lg:gap-20 px-6 lg:px-0">
-        {/* Left Column (Image or Visual) */}
-        <div
-       
-          className="lg:w-1/2 w-full mb-10 lg:mb-0"
-        >
+      <div className="flex flex-col xl:flex-row items-center xl:gap-20 px-6 xl:px-0 relative z-10">
+        {/* Left Column (Image for xl and larger screens) */}
+        <div className="xl:w-1/2 w-full mb-10 xl:mb-0">
           <img
-            src={aboutImage} // Use the imported image
+            src={aboutImage}
             alt="About Us"
-            className="w-full rounded-lg shadow-2xl"
+            className="w-full rounded-lg shadow-2xl hidden xl:block"
           />
         </div>
 
-        {/* Right Column (Text Content) */}
-        <div className="lg:w-1/2 w-full">
-          {/* Main Paragraph */}
-          <p
-          
-            className="text-lg text-[#264653] mb-8 leading-relaxed"
-          >
-            Since 2009, <strong>Social Media</strong> has been at the forefront of digital marketing, not just adapting to the future, but actively shaping it. We saw the potential for deeper brand-audience connections early on, and embraced a pioneer spirit to explore uncharted digital territories. Partnering with diverse brands, we've witnessed and driven the transformative power of digital marketing.
+        {/* Right Column (Text Content with Solid Background for Mobile) */}
+        <div className="xl:w-1/2 w-full bg-white p-6 rounded-lg shadow-sm xl:bg-transparent xl:p-0">
+          <p className="text-lg text-[#264653] mb-8 leading-relaxed">
+            Since 2009, <strong>Social Media</strong> has been at the forefront of digital marketing, not just adapting to the future, but actively shaping it. We saw the potential for deeper brand-audience connections early on and embraced a pioneer spirit to explore uncharted digital territories.
           </p>
 
           {/* Key Points */}
           <div className="space-y-8">
             {/* Point 1 */}
-            <div
-            
-              className="flex items-start gap-6"
-            >
+            <div className="flex items-start gap-6">
               <div className="bg-[#2A9D8F] p-4 rounded-full text-white">
                 <BsLightbulb size={24} />
               </div>
@@ -74,10 +67,7 @@ const About = () => {
             </div>
 
             {/* Point 2 */}
-            <div
-            
-              className="flex items-start gap-6"
-            >
+            <div className="flex items-start gap-6">
               <div className="bg-[#E9C469] p-4 rounded-full text-white">
                 <BsRocket size={24} />
               </div>
@@ -92,10 +82,7 @@ const About = () => {
             </div>
 
             {/* Point 3 */}
-            <div
-          
-              className="flex items-start gap-6"
-            >
+            <div className="flex items-start gap-6">
               <div className="bg-[#E86F51] p-4 rounded-full text-white">
                 <BsPeople size={24} />
               </div>
