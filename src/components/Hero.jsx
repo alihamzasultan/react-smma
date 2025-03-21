@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // Import videos
 import backgroundVideo from "../img/video/hero.mp4"; // High-quality background video
-import placeholderImage from "../img/video/hero.jpg"; // Path to your placeholder image
+
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -61,14 +61,13 @@ const Hero = () => {
     <div className="relative min-h-[80vh] flex items-center justify-center hero-section">
       {/* Background Video */}
       <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
-      <video
-  autoPlay
-  muted
-  loop
-  className="w-full h-full object-cover"
-  src={backgroundVideo}
-  poster={placeholderImage} // Add the poster attribute here
-></video>
+        <video
+          autoPlay
+          muted
+          loop
+          className="w-full h-full object-cover"
+          src={backgroundVideo}
+        ></video>
         {/* Overlay to improve text readability */}
         <div className="absolute top-0 left-0 w-full h-full bg-[#264653] bg-opacity-50"></div>
       </div>
