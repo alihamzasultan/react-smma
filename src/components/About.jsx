@@ -15,7 +15,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="relative xl:mx-32 py-20 bg-white">
+    <div className="relative xl:mx-32 py-20 ">
       {/* Background Image for screens below xl */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20 xl:hidden"
