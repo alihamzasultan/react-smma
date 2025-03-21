@@ -13,7 +13,7 @@ const Footer = () => {
     <div className="bg-gray-800 text-white py-10 px-6">
       <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
         {/* Contact Info */}
-        <div data-aos="fade-right" className="mb-6 md:mb-0">
+        <div className="mb-6 md:mb-0">
           {/* <p className="text-sm font-light">680 Murphy Ave SW</p>
           <p className="text-sm font-light">Suite 1085</p> */}
           <p className="text-sm font-light">info@domain</p>
@@ -21,12 +21,12 @@ const Footer = () => {
         </div>
 
         {/* Logo */}
-        <div data-aos="fade-up" className="my-4">
+        <div className="my-4">
           <img src={Logo} alt="Logo" className="h-10 mx-auto" />
         </div>
 
         {/* Social Media Icons */}
-        <div data-aos="fade-left" className="flex space-x-4">
+        <div className="flex space-x-4">
           <a href="#" className="text-gray-400 hover:text-white transition-all">
             <IoLogoFacebook size={22} />
           </a>
