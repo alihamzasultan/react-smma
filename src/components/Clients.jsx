@@ -7,7 +7,6 @@ import client5 from "../img/clients/client-5.png";
 import client6 from "../img/clients/client-6.png";
 import client7 from "../img/clients/client-7.png";
 import client8 from "../img/clients/client-8.png";
-import Marquee from "react-fast-marquee";
 
 // aos
 import AOS from "aos";
@@ -31,17 +30,17 @@ const Clients = () => {
         Our Learners Work at Global Companies & Startups
       </p>
 
-      {/* Logo slider */}
-      <Marquee pauseOnHover="true" className="flex items-center">
-        <img className="w-28 mr-20" src={client1} alt="img1" />
-        <img className="w-28 mr-20" src={client2} alt="img2" />
-        <img className="w-28 mr-20" src={client3} alt="img3" />
-        <img className="w-28 mr-20" src={client4} alt="img4" />
-        <img className="w-28 mr-20" src={client5} alt="img5" />
-        <img className="w-28 mr-20" src={client6} alt="img6" />
-        <img className="w-28 mr-20" src={client7} alt="img7" />
-        <img className="w-28 mr-20" src={client8} alt="img8" />
-      </Marquee>
+      {/* Static Logos */}
+      <div className="flex flex-wrap justify-center items-center gap-10">
+        <img className="w-28" src={client1} alt="img1" />
+        <img className="w-28" src={client2} alt="img2" />
+        <img className="w-28" src={client3} alt="img3" />
+        <img className="w-28" src={client4} alt="img4" />
+        <img className="w-28" src={client5} alt="img5" />
+        <img className="w-28" src={client6} alt="img6" />
+        <img className="w-28" src={client7} alt="img7" />
+        <img className="w-28" src={client8} alt="img8" />
+      </div>
     </div>
   );
 };
