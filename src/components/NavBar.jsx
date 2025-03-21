@@ -22,7 +22,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="w-full xl:h-24 lg:h-20 h-16 flex flex-row items-center justify-between lg:px-32 sm:px-20 px-10 shadow-lg relative secondary-font">
+    <div className="w-full xl:h-24 lg:h-20 h-16 flex flex-row items-center justify-between lg:px-32 sm:px-20 px-10 shadow-lg fixed top-0 left-0 bg-white z-50">
       {/* Logo */}
       <a href="/" className="flex items-center">
         <img
@@ -34,46 +34,39 @@ const NavBar = () => {
 
       {/* Desktop: Phone number with icon */}
       <div className="lg:flex items-center justify-between hidden">
-      <div className="lg:flex items-center justify-between lg:gap-10 hidden">
-
-
-
-        <a
-          href="/"
-          className="text-gray-800 hover:text-[#EE7540] text-md tracking-wide font-light"
-        >
-          Home
-        </a>
-        <a
-          href="/#about"
-          className="text-gray-800 hover:text-[#EE7540] text-md tracking-wide font-light"
-        >
-          About
-        </a>
-
-        <a
-          href="/#team"
-          className="text-gray-800 hover:text-[#EE7540] text-md tracking-wide font-light"
-        >
-          Team
-        </a>
-        <a
-          href="/#services"
-          className="text-gray-800 hover:text-[#EE7540] text-md tracking-wide font-light"
-        >
-          Services
-        </a>
-
-
-        <a
-          href="tel:502-888-5992" // Updated phone number
-          className="flex items-center gap-2 text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
-        >
-          <FaPhone />
-          <span>502-888-5992</span> {/* Updated phone number */}
-        </a>
-
-      </div>
+        <div className="lg:flex items-center justify-between lg:gap-10 hidden">
+          <a
+            href="/"
+            className="text-gray-800 hover:text-[#EE7540] text-md tracking-wide font-light"
+          >
+            Home
+          </a>
+          <a
+            href="/#about"
+            className="text-gray-800 hover:text-[#EE7540] text-md tracking-wide font-light"
+          >
+            About
+          </a>
+          <a
+            href="/#team"
+            className="text-gray-800 hover:text-[#EE7540] text-md tracking-wide font-light"
+          >
+            Team
+          </a>
+          <a
+            href="/#services"
+            className="text-gray-800 hover:text-[#EE7540] text-md tracking-wide font-light"
+          >
+            Services
+          </a>
+          <a
+            href="tel:502-888-5992" // Updated phone number
+            className="flex items-center gap-2 text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
+          >
+            <FaPhone />
+            <span>502-888-5992</span> {/* Updated phone number */}
+          </a>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -91,32 +84,32 @@ const NavBar = () => {
             <FaPhone />
             <span>502-888-5992</span> {/* Updated phone number */}
           </a>
+          <a
+            href="/"
+            className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
+          >
+            Home
+          </a>
+          <a
+            href="/#team"
+            className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
+          >
+            Team
+          </a>
+          <a
+            href="/Marketing-Website/#about"
+            className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
+          >
+            About
+          </a>
+          <a
+            href="/#services"
+            className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
+          >
+            Services
+          </a>
 
-        <a
-          href="/Marketing-Website/#about"
-          className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
-        >
-          About
-        </a>
-        <a
-          href="/Marketing-Website/#services"
-          className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
-        >
-          Services
-        </a>
-        <a
-          href="/Marketing-Website/#portfolio"
-          className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
-        >
-          Portfolio
-        </a>
 
-        <a
-          href="/Marketing-Website/#contact"
-          className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
-        >
-          Contact
-        </a>
         </div>
       )}
     </div>
