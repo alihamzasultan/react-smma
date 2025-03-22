@@ -1,5 +1,5 @@
 {
-  "homepage": "https://KumarRahul01.github.io/Marketing-Website",
+  "homepage": "https://alihamzasultan.github.io/react-smma",
   "name": "reacttemplate",
   "private": true,
   "version": "0.0.0",
@@ -13,6 +13,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloudinary/url-gen": "^1.21.0",
+    "@supabase/supabase-js": "^2.49.1",
     "aos": "^3.0.0-beta.6",
     "gh-pages": "^6.1.1",
     "gsap": "^3.12.5",
@@ -22,7 +24,8 @@
     "react-hook-form": "^7.51.4",
     "react-icons": "^5.1.0",
     "react-router-dom": "^6.23.0",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "react-youtube": "^10.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
