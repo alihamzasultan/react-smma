@@ -13,9 +13,9 @@ const Home = () => {
   return (
     <div className="container min-w-full min-h-lvh secondary-font">
       <NavBar />
-
+      <section id="about" className="w-full  py-20  ">
         <Hero />
-
+        </section>
       <section id="about" className="w-full max-h-fit py-32  overflow-hidden border-b border-white-100">
         <About />
       </section>
